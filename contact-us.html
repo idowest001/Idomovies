@@ -1,0 +1,160 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - IDOMOVIES ENTERTAINMENT</title>
+<link rel="icon" type="images/x-icon" href="./image/20240213_005037_0000.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./bollywood/page1.html">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    background-color: rgb(102, 102, 225);
+  }
+  header{
+    display: block;
+  }
+  .container {
+    /* max-width: 800px; */
+    width: 93%;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  textarea{
+    height: 27px;
+    /* margin-top: 20px; */
+    margin-bottom: -10px;
+    border-radius: 10px;
+  }
+  #contactForm{
+    display: inline;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+<center>
+<header>
+  
+  <!-- <div class="logo "><img class="container" src="./image/20240213_005037_0000.jpg" alt="" width="40%"></div> -->
+  <h1>Contact Us</h1>
+</header>
+ <h3><a href="./index.html">Back To Home</a></h3>
+<div class="container">
+  <div class="content">
+    <h2>Get in Touch</h2>
+    <p>Have a question, feedback, or suggestion? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="content">
+    <h2>Our Location</h2>
+    <p>We are located in the heart of the city. Feel free to visit us during our business hours.</p>
+    <p>Address: 123 adegbayi Street, Ibadan, Nigeria.</p>
+    <p>Phone: +2347043766884</p>
+    <p>Email: <a href="mailto:idomovies01@gmail.com">idomovies@gmail.com</a></p>
+  </div>
+
+  <div class="content">
+    <h2>Business Hours</h2>
+    <p>We are always open.</p>
+    <!-- <p>Weekends and holidays: Closed</p> -->
+  </div>
+</div>
+<footer class="container">
+    <hr>
+    <div class="footer">
+        <h3>IDOmovies</h3>
+        <P>
+             IDOmovies is a free platform, which means that users can stream or download movies without paying any fees. This makes it an affordable option for movie lovers who want to watch movies without incurring any expenses. Moreover, users can access the platform from any device, including smartphones, tablets, and computers, which adds to its convenience.
+        </P>
+        <div class="icon">
+            
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="idomovies01@gmail.com"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="https://wa.me/+2347043766884"><i class="fa fa-whatsapp"></i></a>
+    
+        </div>
+        <span class="a"> Copyright&copy; 2023 IDOmovies, Inc.</span>
+    </div>
+</footer>
+
+<script>
+  // Function to validate email address
+  function isValidEmail(email) {
+    // Regular expression for email validation
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+
+  // Function to handle form submission
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+    var nameInput = document.getElementById('name');
+    var emailInput = document.getElementById('email');
+    var messageInput = document.getElementById('message');
+    var name = nameInput.value.trim();
+    var email = emailInput.value.trim();
+    var message = messageInput.value.trim();
+
+    // Validate name
+    if (name === '') {
+      alert('Please enter your name.');
+      nameInput.focus();
+      return false;
+    }
+
+    // Validate email
+    if (email === '') {
+      alert('Please enter your email address.');
+      emailInput.focus();
+      return false;
+    } else if (!isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+      emailInput.focus();
+      return false;
+    }
+
+    // Validate message
+    if (message === '') {
+      alert('Please enter your message.');
+      messageInput.focus();
+      return false;
+    }
+
+    // Form submission successful
+    
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+    alert('Thank you for your message! We will get back to you soon.');
+    // Clear the form fields after successful submission
+    nameInput.value = '';
+    emailInput.value = '';
+    messageInput.value = '';
+    return true;
+  }
+
+  // Add event listener to the contact form
+  var contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', handleSubmit);
+</script>
+
+</body>
+</html>

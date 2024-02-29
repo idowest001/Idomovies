@@ -1,0 +1,135 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About-us - IDOMOVIES ENTERTAINMENT</title>
+<link rel="icon" type="images/x-icon" href="./image/20240213_005037_0000.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href=".index.css">
+<link rel="stylesheet" href="./page1.html">
+<link rel="stylesheet" href="./nollywood/nolly1.html">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 90%;
+    padding: 0;
+  }
+
+ h2, h3{
+  font: 2em sans-serif;
+ }
+ p{
+  /* font-size: x-large; */
+  font: 2em monospace;
+ }
+  .content {
+    margin-top: 20px;
+  }
+
+  /* footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  } */
+  a{
+    color: skyblue;
+  }
+</style>
+</head>
+<body>
+  <header class="container" style="width: 95%;">
+    <h1 class="logo"><img src="./image/20240213_005037_0000.jpg" alt="" width="150px" height="50px"></h1>
+  
+  
+    
+  <nav class="">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <ul>
+        <li><a href="./index.html" id="home">Home</a></li>
+        <li><a href="./about.html" id="about">About</a></li>
+        <li><a href="./contact-us.html" id="contact">Contact</a></li>
+    </ul>
+    <input type="text" id="searchInput" placeholder="Search movies...">
+    <i id="searchIcon" class="fa fa-search" onclick="toggleSearchInput()"></i>
+    <button id="searchButton" onclick="searchMovies()">Search</button>
+  </nav>
+  </header>
+  
+<div class="container">
+  <div class="content" id="aboutContent">
+    <!-- About content will be dynamically added here -->
+  </div>
+</div>
+<footer class="container">
+  <hr>
+  <div class="footer">
+      <h3>IDOmovies</h3>
+      <P>
+           IDOmovies is a free platform, which means that users can stream or download movies without paying any fees. This makes it an affordable option for movie lovers who want to watch movies without incurring any expenses. Moreover, users can access the platform from any device, including smartphones, tablets, and computers, which adds to its convenience.
+      </P>
+      <div class="icon">
+          
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="idomovies01@gmail.come"><i class="fa fa-google-plus"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="https://wa.me/+2347043766884"><i class="fa fa-whatsapp"></i></a>
+  
+      </div>
+      <span class="a"> Copyright&copy; 2023 IDOmovies, Inc.</span>
+  </div>
+</footer>
+
+
+<script>
+  // Function to load about content
+  function loadAboutContent() {
+    const aboutContent = document.getElementById('aboutContent');
+    aboutContent.innerHTML = `
+      <h2>Welcome to IDOMOVIES ENTERTAINMENT</h2>
+      <p>IDOMOVIES ENTERTAINMENT is your one-stop destination for discovering and downloading your favorite movies. Whether you're in the mood for action, comedy, romance, or thriller, we've got an extensive library of movies to choose from.</p>
+      <p>With IDOMOVIES ENTERTAINMENT, you can easily search for movies, read summaries, view trailers, and download your selections for offline viewing. Our platform is designed to provide a seamless and user-friendly experience, making it easy for you to find and enjoy the movies you love.</p>
+      <h3>Our Mission</h3>
+      <p>Our mission is to empower movie enthusiasts to access and enjoy a diverse range of films from around the world. We believe that movies have the power to entertain, inspire, and educate, and we're dedicated to making these experiences accessible to all.</p>
+      <p>At IDOMOVIES ENTERTAINMENT, we're committed to curating a diverse and inclusive library of movies that reflect the rich tapestry of human experiences. We aim to celebrate diversity, amplify underrepresented voices, and foster a sense of connection and understanding through the art of storytelling.</p>
+      <h3>Get in Touch</h3>
+      <p>Have questions, suggestions, or feedback? We'd love to hear from you! Feel free to reach out to us via email at <a href="mailto:idomovies@gmail.com">idomovies@gmail.com</a> or through our contact form.</p>
+      <p>Join our community today and embark on a journey of cinematic discovery with IDOMOVIES ENTERTAINMENT!</p>
+      <div class="boxs">
+                    <div class="box4">
+                      <p>
+                        
+                        Secondly, IDOmovies is a user-friendly platform that is easy to navigate. The interface is intuitive, and users can search for movies using various filters, such as genre, language, and release year. This makes it easy for users to find their favorite movies quickly.
+                      </p><br><br>
+                    
+                <div class="box4">
+                   
+                    <p>
+                        
+                        Also, IDOmovies is a free platform, which means that users can stream or download movies without paying any fees. This makes it an affordable option for movie lovers who want to watch movies without incurring any expenses. Moreover, users can access the platform from any device, including smartphones, tablets, and computers, which adds to its convenience.
+        
+                    </p><br><br>
+                </div>
+                
+                    <p>
+                        
+                        Furthermore, IDOmovies provides users with detailed information about each movie, including the cast, synopsis, and rating. This helps users to make informed decisions about the movies they want to watch. The platform also has a user review section, where users can share their opinions about the movies, which adds to the platform’s social aspect.
+                    </p><br><br>
+                
+
+    `;
+  }
+
+  // Call the function to load about content when the page loads
+  window.onload = loadAboutContent;
+</script>
+
+</body>
+</html>

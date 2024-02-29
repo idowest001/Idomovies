@@ -1,0 +1,471 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDOMOVIES ENTERTAINMENT</title>
+<link rel="icon" type="images/x-icon" href="./image/20240213_005037_0000.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../index.css">
+<link rel="stylesheet" href="./nolly1.html">
+<style>
+   #searchInput {
+            display: inline-block;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #searchIcon {
+            display: none; /* Initially hide the search icon */
+            cursor: pointer;
+        }
+
+        /* Media query for tablets and smaller screens */
+        @media screen and (max-width: 832px) {
+            nav ul {
+                display: none;
+            }
+
+            #searchInput {
+                display: none;
+            }
+
+            #searchButton {
+                display: none;
+            }
+            
+            .menu-icon{
+                display: inline-block;
+            }
+
+            #searchIcon {
+                display: inline-block; /* Show the search icon */
+            }
+        }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    background-color: rgb(102, 102, 225);
+  }
+;
+  header {
+    background-color: rgb(102, 102, 225);
+    color: white;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    width: 100%; 
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: center; */
+  }
+
+  nav {
+    background-color: rgb(104, 104, 225);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 3px;
+    text-align: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -200px;
+  }
+
+  nav ul li {
+    display: inline;
+    /* margin-right: 1/0px; */
+    margin-right: 60px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .container {
+    /* max-width: 800px; */
+    width: 93%;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: skyblue;
+  }
+
+  #movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .movie {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .movie h2 {
+    margin-top: 0;
+  }
+
+  .movie p {
+    margin-bottom: 0;
+  }
+
+  .movie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: rgb(102, 102, 225);
+    color: white;
+    margin-bottom: -10;
+    height: auto;
+    /* padding: 10px; */
+    text-align: center;
+    position: relative;
+    /* bottom: 0; */
+    width: 100%;
+  }
+  .footer{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            /* height: 50px; */
+    }
+    .footer h3{
+            font-size: 2.1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 3rem;
+            color:#cacdd2;
+        }
+        .icon a{
+            text-decoration: none;
+        }
+        .icon{gap: 1em;}
+        .footer P{
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 28px;
+            font-size: 14px;
+            color:#cacdd2;
+        }
+
+        .fa{
+            padding: 10px;
+            font-size: 30px;
+            width: 30px;
+            height: 30px;
+            gap: 50px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 60%;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-facebook{
+            background: #3b5998;
+            color: white;
+        }
+        .fa-twitter{
+            background: #3b5998;
+            color: white;
+            align-items: center;
+            
+        }
+        .fa-google-plus{
+            background: #3b5998;
+            color: white;   
+        }
+        .fa-whatsapp{
+            background: #3b5998;
+            color: white;   
+        }
+        .fa-youtube{
+            background: #3b5998;
+            color: white;   
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .a{
+            color:#cacdd2;
+        }
+        .small{ 
+            width: 100%;
+            background-color: #fff;
+            height: 10px;
+            margin-top: -310px;
+        }
+        input{
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        center{
+            /* display: flex; */
+             gap:2px; 
+        }
+        center a{
+          color: #fff;
+          margin-left: 10px;
+
+          /* margin: auto; */
+        }
+        img{
+          background-color: rgb(105, 105, 219);
+          border-radius: 10px;
+          margin-left: 12px;
+        }
+        #consl{
+          background-color: #fff;
+          box-shadow: 2px 2px 2px rgb(105, 105, 219);
+          
+          border-radius: 10px;
+          display: none;
+          width: 200px;
+        }
+</style>
+</head>
+<body>
+  <nav id="bar">
+    <ul class="container" id="show">
+      <li><a href=""><i onclick="close()" class="fa fa-close"></i></a></li> <br>
+      <li><a href="../index.html" id="home">Home</a></li><br><br><br>
+      <li><a href=""> Nollywood</a></li> <br><br><br>
+      <li><a href="">Bollywood</a></li><br><br><br>
+      <li><a href="">Hollywood</a></li><br><br><br>
+      <li><a href="../about.html" id="about">About-us</a></li><br><br><br>
+      <li><a href="../contact-us.html" id="contact">Contact-us</a></li><br>
+  </ul>
+  </nav>
+  <div id="coll">
+  <header class="container" id="cont" style="width: 95%;">
+    <div class="fa fa-bars" id="menuIcon" onclick="toggleMenu()"></div>
+    <h1 class="logo"><a href="../index.html"><img src="../image/20240213_005037_0000.jpg" alt="" width="150px" height="50px"></a></h1>
+  
+  
+    
+  <nav class="" id="">
+    <ul class="container" id="">
+        <li><a href="../index.html" id="home">Home</a></li>
+        <!-- <li><a href=""><i class="fa fa-home"></i></a></li> -->
+        <!-- <li><a href=""> Nollywood</a></li> -->
+        <li><a href="../bollywood/page1.html">Bollywood</a></li>
+        <li><a href="../hollywood/holly1.html">Hollywood</a></li>
+        <li><a href="../about.html" id="about">About</a></li>
+        <li><a href="../contact-us.html" id="contact">Contact</a></li>
+    </ul>
+    <i id="searchIcon" class="fa fa-search" onclick="toggleSearchInput()"></i>
+  <div style="display: flex;" id="searchDiv">
+  <input type="text" id="searchInput" placeholder="Search movies...">
+  <button id="searchButton" onclick="searchMovies()">Search</button>
+  </div>
+  </nav>
+  </header>
+<div class="container">
+  <div id="movies">
+    <!-- Movie cards will be dynamically added here -->
+  </div>
+  <br>
+  <center><a onclick="acon()" id="one" href="./nolly1.html">1</a><a href="./nolly2.html">2</a></center>
+  <center><div id="consl">movie not found <br> go through the browser for more movies</div></center>
+  
+</div>
+
+<footer class="container">
+    <hr>
+    <div class="footer">
+        <h3>IDOmovies</h3>
+        <P>
+             IDOmovies is a free platform, which means that users can stream or download movies without paying any fees. This makes it an affordable option for movie lovers who want to watch movies without incurring any expenses. Moreover, users can access the platform from any device, including smartphones, tablets, and computers, which adds to its convenience.
+        </P>
+        <div class="icon">
+            
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="idomovies01@gmail.com"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="https://wa.me/+2347043766884"><i class="fa fa-whatsapp"></i></a>
+    
+        </div>
+        <span class="a"> Copyright&copy; 2023 IDOmovies, Inc.</span>
+    </div>
+</footer>
+</div>
+<script>
+  // Sample data for movies (replace with your own data or fetch from a database)
+  const movies = [
+    { title: 'Gang Of Lagos', year: 2023, genre: 'Drama', downloadLink: 'https://meetdownload.com/5058928582b341b99ee09cc902b93cf7/waploaded-31658-gangs-of-lagos-2023-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJcJ57cynqpy8HcVWFwDOYU64qYX4vLmDeQ&usqp=CAU' },
+    { title: 'The Invitation', year: 2023, genre: 'Drama', downloadLink: 'https://loadedfiles.org/d82342ce5f47cad7', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvABeMZdTsh_wU8hRWFxos72ggWBDurpM96A&usqp=CAU' },
+    { title: 'Local Love', year: 2024, genre: 'Drama', downloadLink: 'https://meetdownload.com/581fab93ddb6415a9e3bbee9c3c24199/local-love-nollywood-movie-51563-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfeVqvUwr3CJLkBQQgUxRsrW4iY5_z-U0uQ&usqp=CAU' },
+    { title: 'Battle On Buka Street', year: 2023, genre: 'Drama', downloadLink: '#', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0KP2WeKWrMaIor-n0tol9ILL8lwtCzP5SNQ&usqp=CAU' },
+    { title: 'Love Mandate', year: 2024, genre: 'Drama', downloadLink: 'https://meetdownload.com/06c609a4cff54c54bbfe40c8d6338644/love-mandate-nollywood-movie-51645-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP8ZpOVP3E2a_DWLAYml8RTwB3ELhnscZgaw&usqp=CAU' },
+    { title: 'Ijakumo', year: 2022, genre: 'Drama', downloadLink: 'https://meetdownload.com/247aa5c696c64198a2baad38aa536637/waploaded-35581-ijakumo-the-born-again-stripper-2022-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo8n6TFbHJgPYNZvpj1UC3MTPBXmE8Zt-bnNVXG67OnQqijf_JGmiHc_wPsWZdw5dAsMg&usqp=CAU' },
+    { title: 'The Unfamiliar Ally', year: 2024, genre: 'Drama', downloadLink: 'https://meetdownload.com/c3174fc98baf45ea9225cf431ee5ad7d/the-unfamiliar-ally-nollywood-movie-51644-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXnBupDrF1-C4ksm2XMbarhc3AYNJf9CE4gOVGrw9EelV3RbQTiYguJOpReoDINoBeesU&usqp=CAU' },
+    { title: 'With Every Heartbeat', year: 2024 , genre: 'Drama', downloadLink: 'https://meetdownload.com/e870929260ca4c7d801979206a189b13/with-every-heartbeat-nollywood-movie-51565-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6OwrNPa8e7YkAg1htkxvlASDBVqHSp6dfQ&usqp=CAU',},
+    { title: 'Sworn Enemy', year: 2024 , genre: 'Drama', downloadLink: 'https://meetdownload.com/ac99fa8d2b6547219b80fa750ee0f573/sworn-enemies-nollywood-movie-51641-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIzGqxvnS9jY4LnNYNZiqcVzQIZz-S2iS13A&usqp=CAU',},
+    { title: 'Love Me Forever', year: 2024 , genre: 'Drama', downloadLink: 'https://meetdownload.com/54302c254f2b4a5f8486c277e2f5c47d/love-me-forever-nollywood-movie-51466-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEN_DknI2pKTnZfhnX-7Ft6Gx_vdscPtuFew&usqp=CAU',},
+    { title: 'Private Affairs', year: 2024 , genre: 'Drama', downloadLink: 'https://meetdownload.com/dd823bfb71bd4f1b9d8f35114535bc1d/her-private-escort-nollywood-movie-51196-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-2XgRasC4wj2sT_NTCV2JH9X1zCrB3g8Xg&usqp=CAU',},
+    { title: 'Love Rythm', year: 2024 , genre: 'Drama', downloadLink: 'https://meetdownload.com/f18dca82a057418a9a8f54c7697621cf/love-rhythm-nollywood-movie-51643-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLdlJacWQYuVGQFgLPtWAsulEhD0WdS95iow&usqp=CAU',},
+    { title: 'Adire', year: 2023 , genre: 'Drama', downloadLink: 'https://meetdownload.com/9cf7bd4da0f14d87a06ed5b92c909f17/adire-2023-49210-mkv', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLWfWxHZoRtIWMFdPifp8AAF5dQfiq7x4QnQ&usqp=CAU',},
+    { title: 'Ija Olufa', year: 2024 , genre: 'Drama', downloadLink: 'https://meetdownload.com/dfc67d3ad88e426c8d7cb46f95736869/ija-olufa-yoruba-movie-51639-mp4', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeG5pUqKkVwB4GW4cQBkK2Vs819da5Gpqwbg&usqp=CAU',},
+    // { title: '', year: 2023 , genre: 'Drama', downloadLink: '', imageUrl: '',},
+    // { title: '', year: 2023 , genre: 'Drama', downloadLink: '', imageUrl: '',},
+    // { title: '', year: 2023 , genre: 'Drama', downloadLink: '', imageUrl: '',},
+    // { title: '', year: 2023 , genre: 'Drama', downloadLink: '', imageUrl: '',},
+    // { title: '', year: 2023 , genre: 'Drama', downloadLink: '', imageUrl: '',},
+    // { title: '', year: 2023 , genre: 'Drama', downloadLink: '', imageUrl: '',},
+    // { title: '', year: 2023 , genre: 'Drama', downloadLink: '', imageUrl: '',},
+    // Add more movies as needed
+  ];
+
+  // Function to generate movie cards
+  function generateMovieCards() {
+    const moviesContainer = document.getElementById('movies');
+    moviesContainer.innerHTML = ''; // Clear existing content
+  
+    movies.forEach(movie => {
+      const movieCard = document.createElement('div');
+      movieCard.classList.add('movie');
+      movieCard.innerHTML = `
+        <img src="${movie.imageUrl}" alt="${movie.title}">
+        <h2>${movie.title}</h2>
+        <p>Year: ${movie.year}</p>
+        <p>Genre: ${movie.genre}</p>  
+        <button><a href="${movie.downloadLink}" target="_blank">Download <hr class="hrr"></a></button>
+      `;
+      moviesContainer.appendChild(movieCard);
+    });
+  }
+
+  // Call the function to generate movie cards when the page loads
+  window.onload = generateMovieCards;
+
+  // Function to search movies
+  function searchMovies() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Convert search input to lowercase
+    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(searchInput));
+    displayFilteredMovies(filteredMovies);
+    if (searchInput != movies) {
+      consl.style.display = 'block'
+    } else {
+      
+    }
+
+  }
+  // function acon(){
+  //   // const one = document.getElementById('one');
+  //   one.style.color = 'red'
+  // }
+
+  // Function to display filtered movies
+  function displayFilteredMovies(filteredMovies) {
+    const moviesContainer = document.getElementById('movies');
+    moviesContainer.innerHTML = ''; // Clear existing content
+
+    filteredMovies.forEach(movie => {
+      const movieCard = document.createElement('div');
+      movieCard.classList.add('movie');
+      movieCard.innerHTML = `
+        <img src="${movie.imageUrl}" alt="${movie.title}">
+        <h2>${movie.title}</h2>
+        <p>Year: ${movie.year}</p>
+        <p>Genre: ${movie.genre}</p>
+        <a href="${movie.downloadLink}" target="_blank">Download</a>
+      `;
+      moviesContainer.appendChild(movieCard);
+    });
+  }
+  
+    // Function to toggle search input visibility
+    function toggleSearchInput() {
+        var searchInput = document.getElementById('searchInput');
+        var searchButton = document.getElementById('searchButton');
+        var searchDiv = document.getElementById('searchDiv')
+        searchInput.style.display = searchInput.style.display === '' ? 'inline-block' : 'block';
+        searchDiv.style.marginTop = '130px' ;
+        searchDiv.style.marginLeft = '-250px' ;
+        // .style.display = cont.style.display === 'block' ? '' : 'block';
+        searchButton.style.display = searchButton.style.display === 'none' ? 'inline-block' : 'block';
+        //  if (searchInput.style.display === 'none') {
+        //      searchInput.style.display = 'inline-block';
+        //      searchButton.style.display = 'inline-block';
+        //      searchIcon.style.display = 'none';  //Hide the search icon
+        //  } else {
+        //      searchInput.style.display = 'none';
+        //      searchButton.style.display = 'none';
+        //      searchIcon.style.display = 'inline-block';  //Show the search icon
+        //  }
+    
+    }
+  
+
+    // Function to toggle menu visibility
+    
+    // Toggle menu on small screens
+    // document.querySelector('.fa-bars').addEventListener('click', function() {
+    //     document.querySelector('nav ul').classList.toggle('show');
+    //     function toggleMenu() {
+    //     var navUl = document.querySelector('nav ul');
+    //     if (navUl.classList.contains('show')) {
+    //         navUl.classList.remove('show');
+    //     } else {
+    //         navUl.classList.add('show');
+    //     }
+    // }
+    // });
+    function toggleMenu() {
+        var bar = document.getElementById('bar');
+        var coll = document.getElementById('coll');
+        // var searchButton = document.getElementById('searchButton');
+        // searchInput.style.display = searchInput.style.display === 'none' ? 'inline-block' : 'block';
+        bar.style.display = bar.style.display === 'none' ? 'none' : 'block';
+        coll.style.display = cont.style.display === 'none' ? 'none' : 'none';
+        // searchButton.style.display = searchButton.style.display === 'none' ? 'inline-block' : 'none';
+        // if (show.style.display === 'none') {
+        //     show.style.display = 'inline-block';
+        //     // searchButton.style.display = 'inline-block';
+        //     menuIcon.style.display = 'none'; // Hide the search icon
+        // } else {
+        //     show.style.display = 'none';
+        //     // searchButton.style.display = 'none';
+        //     menuIcon.style.display = 'inline-block'; // Show the search icon
+        // }
+    
+    }
+    function close(){
+      coll.style.display = cont.style.display === 'block' ? 'block' : 'block';
+
+    }
+
+</script>
+</head>
+
+</body>
+</html>
+
